@@ -1,63 +1,97 @@
-# ADR 0001: Black project migration directive
+# ADR 0001: BLACK Project Directive
 
-## Status
-
-Accepted
-
-## Date
-
-2026-05-29
+- **Status:** Accepted
+- **Date:** 2026-05-30
 
 ## Context
 
-The prior application existed in a Jarvis-era state with a monolithic FastAPI backend and a large React frontend containing mixed concerns. The old codebase included Jarvis branding, tightly coupled logic, duplicated state and command behavior across frontend and backend, and server-side proxy behavior tied to a specific provider approach.
+BLACK is being built as a private, local-first AI operating system for a single owner. The project is a continuation of earlier work that existed in a more monolithic Jarvis-style codebase.
 
-A new direction has been chosen for the project under the name Black.
+That earlier implementation contained useful logic, working ideas, and real product direction, but it also carried structural problems:
+- oversized files
+- mixed responsibilities
+- harder maintenance
+- reduced clarity
+- weaker long-term scalability
+
+A fresh repository has been created so BLACK can continue in a cleaner and more disciplined form.
+
+---
 
 ## Decision
 
-The project will move forward as Black, a secure, scalable, Christ-centered AI operating system and command hub.
+BLACK will be developed as a **phased, modular, migration-friendly system**.
 
-The migration direction is defined by the following decisions:
+The project will not be rebuilt through one massive rewrite. It will move in controlled stages, preserving useful work while improving structure and reducing redundancy.
 
-1. The project is treated as a refactor and migration effort, not as an imagined completed platform
-2. Black begins as one orchestrator-first system
-3. Specialist agents are deferred until clearly justified
-4. Provider abstraction is a core architectural requirement
-5. Backend and frontend concerns should be more cleanly separated
-6. Redundant command/state logic should be reduced
-7. OpenJarvis readiness is a desired architectural direction
-8. Claude is allowed as part of the provider strategy
-9. Architecture should be production-minded, secure, modular, and maintainable
+### The directive is:
+
+1. Build BLACK as a **single-owner, local-first** system first.
+2. Keep the implementation **modular** across frontend, backend, and documentation.
+3. Extract useful logic from earlier work selectively rather than copying monolithic structure wholesale.
+4. Prioritize a stable working foundation before advanced autonomy or broad integrations.
+5. Preserve strong control features such as approvals, audit visibility, and owner authority from the beginning.
+6. Use phased progress so the system can keep working while architecture improves.
+
+---
+
+## Phase 1 Meaning
+
+Phase 1 is defined as the construction of the BLACK core.
+
+This includes:
+- React/Vite frontend
+- FastAPI backend
+- persistent memory
+- approvals workflow
+- audit visibility
+- local-first inference with cloud fallback
+- learning trace foundation
+- modular project structure
+
+This phase does **not** include:
+- multi-user support
+- open public deployment
+- aggressive external integrations
+- broad autonomous execution
+- premature enterprise infrastructure
+- Phase 2 specialist agent sprawl
+
+---
 
 ## Consequences
 
-### Positive
+### Positive consequences
+- The codebase stays easier to maintain.
+- Frontend and backend can evolve independently with cleaner boundaries.
+- Migration from older work remains practical.
+- The project is less likely to collapse under its own complexity early.
+- The owner keeps clear authority over approvals, actions, and system direction.
 
-- clearer architecture decisions from the start
-- less confusion about present state versus future goals
-- better maintainability
-- stronger alignment between naming, mission, and implementation
-- lower risk of premature overengineering
+### Tradeoffs
+- Progress may feel slower than doing a giant rewrite.
+- Some legacy ideas will need to be reworked rather than copied directly.
+- Documentation and structure must be maintained intentionally.
+- Certain advanced capabilities must wait until the core is stable.
 
-### Trade-offs
+---
 
-- migration may take more disciplined incremental work
-- some short-term feature velocity may be traded for cleaner structure
-- specialist capabilities may arrive later than they would in a less disciplined architecture
+## Implementation Notes
 
-## Implementation guidance
+The repository should reflect this directive:
+- `README.md` explains the project and current Phase 1 state.
+- `ARCHITECTURE.md` explains the system structure and direction.
+- `AGENTS.md` explains how contributors and assistants should operate within the repo.
+- `docs/adr/` records important architectural decisions over time.
 
-Near-term work should focus on:
-- repository structure
-- architecture documentation
-- backend modularization
-- frontend modularization
-- provider abstraction
-- logging and auditability
-- clean naming and boundary decisions
+The frontend should move toward an operator-console structure.  
+The backend should move toward modular routers, services, and orchestration layers.  
+No major change should violate the rule of building a stable owner-controlled core first.
 
-The project should avoid:
-- pretending the current system is already fully modular
-- premature multi-agent expansion
-- feature sprawl before architecture stabilization
+---
+
+## Current Standing
+
+As of this ADR, BLACK is in active Phase 1 development. The frontend direction has already moved toward a cleaner operator-console architecture, and the overall project direction remains modular, local-first, and owner-controlled.
+
+This ADR establishes that direction as the official baseline for future work.
