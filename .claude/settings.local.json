@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import fastapi, uvicorn\")",
+      "Bash(uvicorn app.main:app --reload --port 8000)",
+      "Bash(npm run *)"
+    ]
+  }
+}

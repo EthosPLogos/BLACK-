@@ -1,0 +1,19 @@
+{
+  "user": {
+    "name": "",
+    "identity": "",
+    "goals": [],
+    "businesses": [],
+    "projects": [],
+    "preferences": {},
+    "values": []
+  },
+  "memories": [],
+  "conversations": [
+    {
+      "timestamp": "2026-06-03T19:23:16.160092Z",
+      "user": "hello",
+      "assistant": "Hello! I'm BLACK Researcher. How can I assist you today? \n\nNext step: Please provide some context or a question so we can get started. What would you like to know or discuss?"
+    }
+  ]
+}
