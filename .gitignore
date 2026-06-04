@@ -3,3 +3,12 @@ __pycache__/
 .venv/
 node_modules/
 dist/
+
+# Secrets — never commit
+.env
+*.env
+
+# Runtime data
+backend/black_memory.json
+backend/black_audit.jsonl
+backend/black_approvals.json
