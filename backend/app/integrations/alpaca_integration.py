@@ -9,6 +9,7 @@ Set ALPACA_LIVE=true in .env to switch from paper to live trading API.
 All execution (orders) requires explicit owner approval — this module is read-only.
 """
 import time
+from datetime import datetime, timedelta, timezone
 
 import httpx
 
@@ -18,9 +19,11 @@ _DATA_BASE = "https://data.alpaca.markets"
 _TRADING_BASE = "https://api.alpaca.markets" if ALPACA_LIVE else "https://paper-api.alpaca.markets"
 _TIMEOUT = 8.0
 _CACHE_TTL = 60  # 1-minute cache — Alpaca has generous rate limits but no need to spam
+_HISTORY_CACHE_TTL = 3600  # 1-hour cache for historical bars — data doesn't change intraday
 
 _snapshot_cache: dict[str, tuple[float, dict]] = {}
 _options_cache: dict[str, tuple[float, list]] = {}
+_history_cache: dict[str, tuple[float, dict]] = {}
 _account_cache: tuple[float, dict] | None = None
 
 
@@ -93,6 +96,67 @@ def get_snapshot(symbol: str) -> dict | None:
             "vwap": bar.get("vw"),
         }
         _snapshot_cache[symbol] = (time.time(), result)
+        return result
+    except Exception:
+        return None
+
+
+def get_price_history(symbol: str, days: int = 90) -> dict | None:
+    """
+    Fetch daily OHLCV bars for the past `days` days.
+    Returns a compact summary (first/last close, high/low, % return) rather than
+    the full bar list — keeps the context window manageable for LLM synthesis.
+    Full bars are available under 'bars' key if needed.
+    """
+    if not is_configured():
+        return None
+
+    cache_key = f"{symbol}:{days}"
+    if cache_key in _history_cache:
+        ts, data = _history_cache[cache_key]
+        if not _stale(ts, _HISTORY_CACHE_TTL):
+            return data
+
+    try:
+        start = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        r = httpx.get(
+            f"{_DATA_BASE}/v2/stocks/{symbol}/bars",
+            headers=_headers(),
+            params={"timeframe": "1Day", "start": start, "limit": days + 5},
+            timeout=_TIMEOUT,
+        )
+        if r.status_code != 200:
+            return None
+
+        bars = r.json().get("bars", [])
+        if not bars:
+            return None
+
+        closes = [b["c"] for b in bars if "c" in b]
+        highs = [b["h"] for b in bars if "h" in b]
+        lows = [b["l"] for b in bars if "l" in b]
+        volumes = [b["v"] for b in bars if "v" in b]
+
+        first_close = closes[0] if closes else None
+        last_close = closes[-1] if closes else None
+        period_return = None
+        if first_close and last_close and first_close > 0:
+            period_return = round(((last_close - first_close) / first_close) * 100, 2)
+
+        result = {
+            "symbol": symbol,
+            "days_requested": days,
+            "bars_returned": len(bars),
+            "period_start": bars[0].get("t", "")[:10] if bars else None,
+            "period_end": bars[-1].get("t", "")[:10] if bars else None,
+            "open_price": bars[0].get("o") if bars else None,
+            "latest_close": last_close,
+            "period_high": max(highs) if highs else None,
+            "period_low": min(lows) if lows else None,
+            "period_return_pct": period_return,
+            "avg_daily_volume": round(sum(volumes) / len(volumes)) if volumes else None,
+        }
+        _history_cache[cache_key] = (time.time(), result)
         return result
     except Exception:
         return None
