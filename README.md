@@ -1,90 +1,97 @@
-# Black
+# Mr. Black
 
-Black is a secure, scalable, Christ-centered AI operating system and command hub focused on investment and market intelligence, online commerce execution, and disciplined decision support.
+Mr. Black is a secure, local-first, Christ-centered AI operating system and command hub — built for one owner. Focused on investment and market intelligence, online commerce execution, and disciplined decision support grounded in biblical stewardship.
 
 ## Purpose
 
-This repository is the clean restart of the previous Jarvis-era project. It is being built with an orchestrator-first architecture so the core assistant remains strong, modular, and maintainable before any specialist agent expansion.
+This repository is the clean rebuild of the previous Jarvis-era project. Mr. Black is built with an orchestrator-first architecture so the core assistant remains strong, modular, and maintainable before any specialist agent expansion.
 
 ## Mission
 
-Black is being designed to support:
+Mr. Black is designed to support:
 - Investment and market intelligence
 - Online commerce execution and optimization
 - Long-term decision support grounded in biblical stewardship, honesty, diligence, integrity, generosity, wisdom, and accountability
 
-## Current status
+## Current Status
 
-This repository is the new Black baseline. The prior project existed as a Jarvis-era monolithic FastAPI backend and oversized React frontend, and this repo starts the migration into a cleaner architecture with stronger boundaries between backend, frontend, providers, orchestration, and documentation.
+Mr. Black is in **Phase 1** — active and operational as a single-owner, local-first AI operating system.
 
-## Core principles
+Phase 1 is complete and running:
+- React/Vite operator console (chat, approvals, memory, audit, scheduler, integrations, backup)
+- FastAPI backend with modular routers, services, and orchestration
+- 14 specialist agents (Finance, Business, Researcher, Builder, Execution, Security, GRE, Science, Email, Job Search, Job Apply, Ecommerce, World Intel, Fact Checker/Verifier)
+- Persistent memory system with encryption
+- Approval-gated action execution
+- Audit logging
+- Local-first inference (Ollama) with cloud fallback (Groq, OpenRouter, Anthropic, Perplexity)
+- Scheduled tasks with macOS notifications
+- Personal integrations: Calendar, Reminders, Notes, Contacts, Files, Email (IMAP), Weather, Web Search
+- Voice: Whisper STT + macOS TTS, wake word detection ("Hey Mr. Black")
+- Kill switch: "Chibuike kill Mr. Black" — voice, chat, or `stop-black.command`
+
+## Core Principles
 
 - Orchestrator-first before multi-agent expansion
 - Modular architecture over monolithic growth
 - Low redundancy between frontend and backend
 - Provider abstraction instead of hard-wired model logic
 - Production-minded design: logging, auditability, security, and maintainability
-- OpenJarvis integration readiness where appropriate
 - Local-first and on-device capability where appropriate
+- Single-owner: no multi-user, no public deployment, no unnecessary exposure
 
-## Repository structure
+## Repository Structure
 
 ```text
 black/
 ├── backend/
+│   ├── app/
+│   │   ├── agents/          # 14 specialist agents
+│   │   ├── api/             # Modular routers
+│   │   ├── approvals/       # Approval gate
+│   │   ├── audit/           # Audit logging
+│   │   ├── execution/       # Sandboxed execution
+│   │   ├── integrations/    # Calendar, email, weather, etc.
+│   │   ├── memory/          # Persistent encrypted memory
+│   │   ├── middleware/       # Auth, rate limiting, security headers
+│   │   ├── orchestrator/    # Engine, router, context, chain
+│   │   ├── policy/          # Policy engine and rules
+│   │   ├── scheduler/       # Task scheduling and watchdog
+│   │   ├── services/        # Inference clients and utilities
+│   │   └── main.py
+│   └── requirements.txt
 ├── frontend/
+│   └── src/
+│       ├── App.jsx          # Operator console
+│       └── LandingPage.jsx
 ├── docs/
-│   └── adr/
+├── start-black.command      # Launch everything (Ollama + backend + frontend)
+├── stop-black.command       # Kill switch
 ├── README.md
 ├── ARCHITECTURE.md
 └── AGENTS.md
 ```
 
-## Immediate goals
+## Launch
 
-1. Define architecture clearly before feature expansion
-2. Build a modular FastAPI backend structure
-3. Build a cleaner React frontend structure
-4. Reduce Jarvis-era duplication and tight coupling
-5. Create a stable foundation for future provider and agent expansion
+Double-click **`start-black.command`** or click the **Mr. Black** app icon on your Desktop.
 
-## Notes
+This starts Ollama, the FastAPI backend on `:8001`, and the Vite frontend on `:5173`, then opens the operator console in your browser.
 
-This is not a greenfield product concept in the abstract. It is the intentional rebuild and migration path for a real project moving from Jarvis to Black.
+**Kill switch:** Say or type `"Chibuike kill Mr. Black"`, or double-click `stop-black.command`.
 
-## Project Update 
+## Phase 2 (Future)
 
-2026-05-30 — Phase 1 Project Update
+After Phase 1 is stable and trustworthy, Mr. Black may expand into:
+- Specialist agent expansion
+- External service integrations
+- Stronger automation and higher-trust execution
+- Scalable production infrastructure
 
-BLACK remains in Phase 1 as a single-owner, local-first AI operating system focused on the core stack: React/Vite frontend, FastAPI backend, persistent memory, approvals, audit logging, and local/cloud inference routing.
+None of that compromises the current mission: a stable, modular, owner-controlled core first.
 
-Current project status:
-- The new BLACK repository has replaced the old Jarvis-era working direction.
-- The architecture is being rebuilt in a more modular form rather than continuing as a monolithic codebase.
-- Phase 1 is active and focused on establishing a stable owner-console foundation before expanding features.
+## Project Update
 
-Completed progress so far:
-- New BLACK repository initialized and connected to GitHub.
-- Core project structure established for backend, frontend, and architecture documents.
-- Project directive and architecture baseline created.
-- Phase 1 direction confirmed as local-first, single-owner, and modular.
-- Frontend refactor accepted into the Phase 1 project direction.
-- Frontend structure now moves toward an app-shell/operator-console model with modular views, centralized API handling, approval-count synchronization, and in-memory session handling aligned with the current backend conversation model.
+2026-07-30 — Phase 1 Complete
 
-Current Phase 1 scope:
-- React/Vite frontend for the operator console
-- FastAPI backend with modular router direction
-- Persistent memory system
-- Approval-gated actions
-- Audit visibility
-- Learning trace foundation
-- Local-first inference with cloud fallback when needed
-
-What remains in Phase 1:
-- Backend validation and cleanup
-- End-to-end boot testing
-- Runtime stabilization across frontend, backend, and inference services
-- Verification that merged frontend behavior works cleanly against live backend endpoints
-
-Summary:
-BLACK has progressed from repo initialization into active Phase 1 system construction. The project now has a clearer modular direction, and the frontend merge improves the operator-console architecture. The next milestone is stabilization and validation, not expansion.
+Mr. Black is fully operational as a local-first AI operating system. The system boots cleanly, all 14 agents route correctly, memory and approvals work end to end, and the operator console is live. The next milestone is Phase 1 stabilization — end-to-end testing, portability hardening, and runtime validation before any Phase 2 expansion.
