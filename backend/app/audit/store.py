@@ -3,8 +3,25 @@ from datetime import datetime, timezone
 
 from app.config import AUDIT_LOG_PATH
 
+_MAX_AUDIT_LINES = 10_000
+
+
+def _rotate_if_needed() -> None:
+    if not AUDIT_LOG_PATH.exists():
+        return
+    try:
+        lines = AUDIT_LOG_PATH.read_text(encoding="utf-8").splitlines()
+        if len(lines) > _MAX_AUDIT_LINES:
+            AUDIT_LOG_PATH.write_text(
+                "\n".join(lines[-_MAX_AUDIT_LINES:]) + "\n",
+                encoding="utf-8",
+            )
+    except OSError:
+        pass
+
 
 def append(record: dict) -> None:
+    _rotate_if_needed()
     with open(AUDIT_LOG_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
 

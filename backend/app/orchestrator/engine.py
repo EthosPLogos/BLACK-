@@ -5,12 +5,24 @@ from app.approvals.models import create_approval_record
 from app.approvals.store import add_approval
 from app.audit import logger as audit
 from app.memory.store import add_conversation
-from app.orchestrator.chain import resolve_system, run_chain, run_verifier_audit
+from app.orchestrator.chain import resolve_system, run_chain, run_fact_check, run_verifier_audit
 from app.orchestrator.context import build_prompt
 from app.orchestrator.router import classify_intent
 from app.policy.engine import evaluate as policy_evaluate
 from app.policy.models import PolicyVerdict
-from app.services.inference import active_provider, stream_inference
+from app.services.inference import OllamaDownError, active_provider, select_tier, stream_inference
+
+
+def _build_ollama_down_response(reason: str) -> dict:
+    return {
+        "reply": f"LOCAL MODEL OFFLINE\n\n{reason}",
+        "agent": "black",
+        "task_type": "halted",
+        "memory_used": False,
+        "policy_verdict": "halted",
+        "approval_id": None,
+        "inference_provider": "none",
+    }
 
 
 def _build_blocked_response(reason: str) -> dict:
@@ -55,7 +67,7 @@ def run_black(user_input: str, background_tasks=None) -> dict:
     audit.log_event(
         "intent_classified",
         {"agent": route["agent"], "task_type": route["task_type"],
-         "domain": route["domain"], "input_preview": user_input[:120]},
+         "domain": route["domain"], "input_preview": user_input[:60]},
         session_id=session_id,
     )
 
@@ -84,29 +96,39 @@ def run_black(user_input: str, background_tasks=None) -> dict:
         audit.log_event(
             "approval_required",
             {"approval_id": record["id"], "reason": policy.reason,
-             "trust_level": policy.trust_level.value, "input_preview": user_input[:200]},
+             "trust_level": policy.trust_level.value, "input_preview": user_input[:60]},
             session_id=session_id,
         )
         return _build_approval_response(record, policy.reason)
 
-    prompt, memory_used = build_prompt(user_input)
+    tier = select_tier(route["task_type"], route["domain"], user_input)
+    prompt, memory_used = build_prompt(user_input, domain=route["domain"])
     audit.log_event(
         "agent_invoked",
-        {"agent": route["agent"], "task_type": route["task_type"], "domain": route["domain"]},
+        {"agent": route["agent"], "task_type": route["task_type"], "domain": route["domain"], "tier": tier},
         session_id=session_id,
     )
 
-    result = run_chain(
-        agent_name=route["agent"],
-        task_type=route["task_type"],
-        domain=route["domain"],
-        prompt=prompt,
-        session_id=session_id,
-        user_input=user_input,
-    )
+    try:
+        result = run_chain(
+            agent_name=route["agent"],
+            task_type=route["task_type"],
+            domain=route["domain"],
+            prompt=prompt,
+            session_id=session_id,
+            user_input=user_input,
+            tier=tier,
+        )
+    except OllamaDownError as exc:
+        audit.log_event("ollama_down_halted", {"reason": str(exc)}, session_id=session_id)
+        return _build_ollama_down_response(str(exc))
 
     add_conversation(user_input, result["reply"])
     audit.log_event("conversation_stored", {}, session_id=session_id)
+
+    fact_check = run_fact_check(
+        user_input, result["reply"], route["task_type"], session_id,
+    )
 
     if background_tasks is not None and route["task_type"] in {"draft", "action-plan"}:
         background_tasks.add_task(
@@ -121,6 +143,7 @@ def run_black(user_input: str, background_tasks=None) -> dict:
         "policy_verdict": PolicyVerdict.AUTO_APPROVED.value,
         "approval_id": None,
         "inference_provider": result["provider"],
+        "fact_check": fact_check,
     }
 
 
@@ -132,7 +155,7 @@ async def stream_black(user_input: str) -> AsyncIterator[dict]:
     audit.log_event(
         "intent_classified",
         {"agent": route["agent"], "task_type": route["task_type"],
-         "domain": route["domain"], "input_preview": user_input[:120], "path": "stream"},
+         "domain": route["domain"], "input_preview": user_input[:60], "path": "stream"},
         session_id=session_id,
     )
 
@@ -162,29 +185,28 @@ async def stream_black(user_input: str) -> AsyncIterator[dict]:
         audit.log_event(
             "approval_required",
             {"approval_id": record["id"], "reason": policy.reason,
-             "trust_level": policy.trust_level.value, "input_preview": user_input[:200]},
+             "trust_level": policy.trust_level.value, "input_preview": user_input[:60]},
             session_id=session_id,
         )
         yield {"type": "pending_approval", **_build_approval_response(record, policy.reason)}
         return
 
-    prompt, memory_used = build_prompt(user_input)
+    tier = select_tier(route["task_type"], route["domain"], user_input)
+    prompt, memory_used = build_prompt(user_input, domain=route["domain"])
     system, effective_agent = resolve_system(route["agent"], route["domain"], user_input)
 
-    # Determine provider before streaming so the done event has accurate metadata.
-    # active_provider() uses the same 30s-cached probe as stream_inference internaly.
-    provider = active_provider()
+    provider = active_provider(tier)
 
     audit.log_event(
         "agent_invoked",
         {"agent": effective_agent, "task_type": route["task_type"],
-         "domain": route["domain"], "path": "stream", "provider": provider},
+         "domain": route["domain"], "path": "stream", "provider": provider, "tier": tier},
         session_id=session_id,
     )
 
     collected: list[str] = []
     try:
-        async for token in stream_inference(prompt=prompt, system=system):
+        async for token in stream_inference(prompt=prompt, system=system, tier=tier):
             collected.append(token)
             yield {"type": "token", "content": token}
     except RuntimeError as exc:
@@ -211,3 +233,8 @@ async def stream_black(user_input: str) -> AsyncIterator[dict]:
         "approval_id": None,
         "inference_provider": provider,
     }
+
+    fact_check = run_fact_check(
+        user_input, complete_reply, route["task_type"], session_id,
+    )
+    yield {"type": "fact_check", **fact_check}

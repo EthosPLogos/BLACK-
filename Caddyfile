@@ -1,0 +1,17 @@
+{
+    local_certs
+}
+
+black mrblack localhost 172.20.33.0 {
+    handle /api/* {
+        reverse_proxy localhost:8001
+    }
+
+    root * /Users/victori/Desktop/black/frontend/dist
+    file_server
+    try_files {path} /index.html
+
+    log {
+        level ERROR
+    }
+}

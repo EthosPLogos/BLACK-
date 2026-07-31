@@ -1,8 +1,19 @@
 import json
+import subprocess
 from datetime import datetime, timezone
 
 from app.config import APPROVALS_PATH
 from app.approvals.models import APPROVED, EXECUTED, PENDING, REJECTED
+
+
+def _notify_approval(record: dict) -> None:
+    msg = record.get("user_input", "Action requires review")[:80]
+    subprocess.run(
+        ["osascript", "-e",
+         f'display notification "{msg}" with title "Mr.Black — Approval Required" '
+         f'subtitle "Open the approval panel to review" sound name "Sosumi"'],
+        check=False,
+    )
 
 
 def _load() -> dict:
@@ -22,6 +33,7 @@ def add_approval(record: dict) -> None:
     data = _load()
     data["records"][record["id"]] = record
     _save(data)
+    _notify_approval(record)
 
 
 def get_pending() -> list[dict]:

@@ -169,3 +169,7 @@ Any assistant, developer, or future contributor working in this repo should:
 - keep recommendations practical
 - prefer staged implementation over sweeping rewrites
 - align every change with the real BLACK vision
+## Custom Agent Files
+
+- `job-search.agent.md` — ATS-aware job search and resume tailoring assistant for $65k–$90k property claims / adjuster opportunities.
+- `ecommerce-market.agent.md` — ecommerce trend researcher and Shopify market strategy assistant for identifying online selling opportunities and optimizing an existing Shopify store.

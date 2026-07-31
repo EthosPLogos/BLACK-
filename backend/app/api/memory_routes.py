@@ -1,9 +1,11 @@
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
 from app.audit import logger as audit
+from app.memory.patterns import get_patterns
+from app.memory.search import search_memory
 from app.memory.store import (
     add_fact,
     clear_conversations,
@@ -65,3 +67,14 @@ def patch_user(payload: UpdateUserRequest):
         raise HTTPException(status_code=400, detail=str(exc))
     audit.log_event("user_profile_updated", {"field": payload.field})
     return {"ok": True}
+
+
+@router.get("/search")
+def search(q: str = Query(..., min_length=1), limit: int = Query(5, ge=1, le=20)):
+    results = search_memory(q, limit=limit)
+    return {"query": q, "results": results, "total": len(results)}
+
+
+@router.get("/patterns")
+def patterns():
+    return get_patterns()

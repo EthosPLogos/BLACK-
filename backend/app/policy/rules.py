@@ -8,15 +8,46 @@ ACTION_TRUST_MAP: dict[str, TrustLevel] = {
     "action-plan": TrustLevel.DRAFT,  # a plan is a draft, not execution
 }
 
-# Never execute — irreversible or destructive, matched against lowercase input
+# Never execute — irreversible or destructive, matched against normalized lowercase input
 BLOCKED_PATTERNS: list[str] = [
+    # Destructive filesystem
     "rm -rf",
-    "drop database",
-    "drop table",
+    "rm -r /",
+    "sudo rm",
     "format drive",
     "wipe all",
+    "mkfs",
+    "dd if=",
+    # Database destruction
+    "drop database",
+    "drop table",
+    "truncate table",
+    # Memory destruction
     "delete all memory",
     "delete all conversations",
+    # System control
+    "sudo shutdown",
+    "sudo reboot",
+    "sudo halt",
+    "pkill -9",
+    "killall -9",
+    # Credential file access
+    "/etc/passwd",
+    "/etc/shadow",
+    "/etc/sudoers",
+    ".ssh/id_rsa",
+    ".aws/credentials",
+    # Remote code execution pipes
+    "curl | bash",
+    "curl | sh",
+    "wget | bash",
+    "wget | sh",
+    "| sudo",
+    # Privilege escalation
+    "chmod 777 /",
+    "chown root",
+    "sudo su",
+    "sudo -i",
 ]
 
 # Require explicit owner approval before BLACK proceeds — matched against lowercase input

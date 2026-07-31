@@ -5,3 +5,9 @@ python-dotenv
 pydantic
 anthropic
 cryptography
+apscheduler
+openai-whisper
+python-multipart
+ddgs
+pypdf
+python-docx

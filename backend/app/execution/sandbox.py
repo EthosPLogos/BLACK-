@@ -1,6 +1,7 @@
 import subprocess
 
 # Explicit allowlist — nothing outside this set will be run.
+# cat/head/tail removed: they can read arbitrary system files via absolute paths.
 ALLOWED_PROGRAMS = {
     "git",
     "python", "python3",
@@ -8,7 +9,7 @@ ALLOWED_PROGRAMS = {
     "npm", "npx", "node",
     "pytest",
     "uvicorn",
-    "ls", "find", "cat", "head", "tail",
+    "ls", "find",
 }
 
 DEFAULT_TIMEOUT = 30

@@ -1,9 +1,19 @@
+import re
+import unicodedata
+
 from app.policy.models import PolicyResult, PolicyVerdict, TrustLevel
 from app.policy.rules import ACTION_TRUST_MAP, BLOCKED_PATTERNS, HIGH_RISK_PATTERNS
 
 
+def _normalize(text: str) -> str:
+    """Normalize input to defeat homoglyph/whitespace evasion before pattern matching."""
+    text = unicodedata.normalize("NFKC", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.lower()
+
+
 def evaluate(user_input: str, task_type: str, domain: str = "general") -> PolicyResult:
-    text = user_input.lower()
+    text = _normalize(user_input)
 
     for pattern in BLOCKED_PATTERNS:
         if pattern in text:

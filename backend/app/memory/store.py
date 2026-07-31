@@ -132,6 +132,7 @@ def update_user_field(field: str, value) -> None:
 
 
 def add_conversation(user_message: str, black_reply: str) -> None:
+    from app.memory.summarizer import maybe_summarize
     memory = load_memory()
     memory["conversations"].append(
         {
@@ -145,4 +146,5 @@ def add_conversation(user_message: str, black_reply: str) -> None:
     if len(memory.get("memories", [])) > MAX_FACTS:
         memory["memories"] = memory["memories"][-MAX_FACTS:]
 
+    memory = maybe_summarize(memory)
     save_memory(memory)

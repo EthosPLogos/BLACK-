@@ -12,3 +12,10 @@ dist/
 backend/black_memory.json
 backend/black_audit.jsonl
 backend/black_approvals.json
+backend/black_schedule.json
+
+# macOS
+.DS_Store
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json

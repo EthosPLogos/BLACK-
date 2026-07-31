@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLACK</title>
+    <title>Mr.Black</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #08090a; }
+      @keyframes pulse-ring { 0%,100%{opacity:.15;transform:scale(1)} 50%{opacity:.35;transform:scale(1.04)} }
+      @keyframes pulse-core { 0%,100%{opacity:.8} 50%{opacity:1} }
+      @keyframes spin-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+      @keyframes spin-slow-rev { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+      @keyframes fade-up { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes glow-flicker { 0%,100%{text-shadow:0 0 40px rgba(200,160,40,.4),0 0 80px rgba(200,160,40,.15)} 50%{text-shadow:0 0 60px rgba(200,160,40,.6),0 0 120px rgba(200,160,40,.25)} }
+      @keyframes scan-line { 0%{top:0%;opacity:.6} 100%{top:100%;opacity:0} }
+      @keyframes blink-dot { 0%,100%{opacity:1} 50%{opacity:.2} }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      ::-webkit-scrollbar{width:4px} ::-webkit-scrollbar-track{background:transparent} ::-webkit-scrollbar-thumb{background:#27272a;border-radius:2px}
+      .feature-card:hover { border-color:rgba(200,160,40,.35)!important; background:rgba(200,160,40,.04)!important; transform:translateY(-3px); }
+      .launch-btn:hover { background:#c8a028!important; box-shadow:0 0 40px rgba(200,160,40,.5),0 8px 24px rgba(0,0,0,.4)!important; transform:translateY(-2px); }
+      .launch-btn:active { transform:translateY(0)!important; }
+    </style>
     <script type="module" src="/src/main.jsx"></script>
   </head>
   <body>

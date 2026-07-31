@@ -4,7 +4,7 @@ from app.execution.resolver import resolve_action
 from app.execution.sandbox import run_command
 from app.services.inference import call_inference
 
-EXECUTION_SYSTEM = """You are BLACK Execution Agent.
+EXECUTION_SYSTEM = """You are Mr.Black Execution.
 
 You receive the output of an executed command and write a clear, factual summary for the owner.
 State what ran, whether it succeeded or failed, and what the output means.
