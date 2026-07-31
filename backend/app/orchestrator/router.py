@@ -2,6 +2,27 @@ import re
 
 # Domain detection — score by keyword hits, pick highest
 DOMAIN_KEYWORDS: dict[str, list[str]] = {
+    "update_intel": [
+        # System health / update checks
+        "update check", "system check", "check for updates", "run updates",
+        "what's outdated", "outdated packages", "pip outdated", "npm outdated",
+        "package updates", "dependency updates", "upgrade packages",
+        "update mr black", "update yourself", "update black",
+        # New AI models / capabilities
+        "new models", "latest models", "new ollama models", "ollama update",
+        "what models are available", "pull new model", "update model",
+        "latest llm", "new ai models", "better model", "faster model",
+        "upgrade model", "new claude", "new groq", "new llama",
+        "what's new in ai", "latest ai", "ai updates", "ai news tools",
+        "new capabilities", "new features for black", "improve mr black",
+        "make black better", "make mr black better", "enhance black",
+        # System improvement framing
+        "what should we upgrade", "what needs updating", "system health",
+        "health report", "performance check", "is black up to date",
+        "are we up to date", "anything to update", "any updates",
+        "update report", "upgrade report", "weekly update",
+        "latest and greatest", "keep current", "stay current",
+    ],
     "weather": [
         "weather", "temperature", "forecast", "rain", "sunny", "cloudy",
         "humidity", "wind", "hot", "cold", "outside today", "what's it like",
@@ -296,12 +317,13 @@ INTENT_MAP: list[tuple[str, str, list[str]]] = [
 # Domains where a single keyword is highly specific — no minimum threshold needed
 _SINGLE_KW_DOMAINS = frozenset({
     "weather", "calendar", "reminders", "files", "notes", "contacts", "email",
-    "science",    # scientific vocabulary is precise — one match is enough
-    "finance",    # options/trading vocabulary is unambiguous — iron condor, straddle, etc.
-    "security",   # security vocabulary is unambiguous — CVE, phishing, ransomware, etc.
-    "job_apply",  # multi-word phrases are unambiguous — "apply for jobs", "stop applying"
-    "gre",        # GRE vocabulary is unambiguous — "gre", "powerprep", "quantitative reasoning"
-    "forge",      # multi-word phrases are unambiguous — "build a website", "landing page"
+    "science",       # scientific vocabulary is precise — one match is enough
+    "finance",       # options/trading vocabulary is unambiguous — iron condor, straddle, etc.
+    "security",      # security vocabulary is unambiguous — CVE, phishing, ransomware, etc.
+    "job_apply",     # multi-word phrases are unambiguous — "apply for jobs", "stop applying"
+    "gre",           # GRE vocabulary is unambiguous — "gre", "powerprep", "quantitative reasoning"
+    "forge",         # multi-word phrases are unambiguous — "build a website", "landing page"
+    "update_intel",  # update/system-check phrases are unambiguous — "check for updates", "new models"
 })
 
 # Minimum keyword hits required to commit to a domain (for all other domains)

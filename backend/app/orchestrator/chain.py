@@ -1,4 +1,5 @@
 from app.agents.builder import BUILDER_SYSTEM
+from app.agents.update_agent import UPDATE_INTEL_SYSTEM
 from app.agents.business_agent import BUSINESS_SYSTEM
 from app.agents.ecommerce_market_agent import ECOMMERCE_SYSTEM
 from app.agents.email_agent import EMAIL_SYSTEM
@@ -109,6 +110,16 @@ def resolve_system(agent_name: str, domain: str, user_input: str = "") -> tuple[
 
     if domain == "forge":
         return WEB_BUILDER_SYSTEM, "forge"
+
+    if domain == "update_intel":
+        from app.api.update_routes import update_check
+        try:
+            report = update_check()
+            import json
+            ctx = f"\nLIVE SYSTEM UPDATE REPORT (fetched now):\n{json.dumps(report, indent=2)}\n"
+            return f"{UPDATE_INTEL_SYSTEM}{ctx}", "update_intel"
+        except Exception:
+            return UPDATE_INTEL_SYSTEM, "update_intel"
 
     if agent_name == "builder":
         return BUILDER_SYSTEM, "builder"

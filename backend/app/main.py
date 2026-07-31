@@ -10,6 +10,7 @@ from starlette.responses import JSONResponse
 
 from app.api.approval_routes import router as approval_router
 from app.api.forge_routes import router as forge_router
+from app.api.update_routes import router as update_router
 from app.api.job_apply_routes import router as job_apply_router
 from app.api.audit_routes import router as audit_router
 from app.api.backup_routes import router as backup_router
@@ -98,3 +99,4 @@ app.include_router(email_router)
 app.include_router(backup_router)
 app.include_router(job_apply_router)
 app.include_router(forge_router)
+app.include_router(update_router)
