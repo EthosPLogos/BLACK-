@@ -172,6 +172,22 @@ def research(request: ResearchRequest):
         },
     )
 
+    # Persist to Postgres when available
+    try:
+        from app.db.session import get_session, is_available
+        if is_available():
+            from app.db.models import ResearchNote
+            with get_session() as session:
+                session.add(ResearchNote(
+                    ticker=ticker,
+                    signal=state.get("signal"),
+                    confidence=state.get("confidence"),
+                    summary=state.get("summary"),
+                    reasoning_steps=state.get("reasoning_steps", []),
+                ))
+    except Exception:
+        pass  # DB write failure never blocks the response
+
     return ResearchResponse(
         ticker=ticker,
         signal=state.get("signal", "neutral"),

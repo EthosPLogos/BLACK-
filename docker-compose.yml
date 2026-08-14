@@ -1,0 +1,43 @@
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: black_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-black}
+      POSTGRES_USER: ${POSTGRES_USER:-black}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - black_pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-black}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: black_backend
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    env_file:
+      - backend/.env
+    environment:
+      # Override DB URL to point at the postgres service
+      DATABASE_URL: postgresql://${POSTGRES_USER:-black}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-black}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      # Persist runtime data files outside the container
+      - black_data:/app/data
+
+volumes:
+  black_pgdata:
+  black_data:

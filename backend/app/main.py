@@ -29,6 +29,8 @@ from app.scheduler import runner
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
+    from app.db.migrate import run_migrations
+    run_migrations()
     runner.start()
     yield
     runner.stop()

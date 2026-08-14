@@ -11,3 +11,5 @@ python-multipart
 ddgs
 pypdf
 python-docx
+sqlalchemy
+psycopg2-binary
