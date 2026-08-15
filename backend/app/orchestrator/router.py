@@ -2,6 +2,29 @@ import re
 
 # Domain detection — score by keyword hits, pick highest
 DOMAIN_KEYWORDS: dict[str, list[str]] = {
+    "igbo": [
+        # Language identity
+        "igbo", "ibo", "igbo language", "speak igbo", "learn igbo", "teach me igbo",
+        "igbo word", "igbo words", "igbo phrase", "igbo phrases",
+        "igbo translation", "translate to igbo", "what is igbo for",
+        "igbo meaning", "what does igbo", "in igbo",
+        # Vocabulary triggers
+        "ndeewo", "kedu", "daalu", "biko", "nnoo", "ka odi", "jide ike",
+        "o di mma", "ọ dị mma", "ka chi fo", "ka emechaa",
+        # Lessons
+        "igbo greetings", "igbo numbers", "igbo family", "igbo food",
+        "igbo verbs", "igbo body", "igbo colors", "igbo animals",
+        "igbo proverbs", "ilu igbo", "igbo culture",
+        # People / places
+        "igbo people", "igbo nation", "southeastern nigeria", "biafra",
+        "enugu", "anambra", "imo", "abia", "ebonyi",
+        # Cultural
+        "kola nut", "oji", "ọjị", "palm wine", "mmanya", "obi", "chi",
+        "naming ceremony", "igba nkwu", "iwa akwa",
+        # Meta
+        "what is igbo", "igbo for beginners", "igbo lesson", "practice igbo",
+        "igbo vocabulary", "igbo dictionary",
+    ],
     "update_intel": [
         # System health / update checks
         "update check", "system check", "check for updates", "run updates",
@@ -324,6 +347,7 @@ _SINGLE_KW_DOMAINS = frozenset({
     "gre",           # GRE vocabulary is unambiguous — "gre", "powerprep", "quantitative reasoning"
     "forge",         # multi-word phrases are unambiguous — "build a website", "landing page"
     "update_intel",  # update/system-check phrases are unambiguous — "check for updates", "new models"
+    "igbo",          # "igbo" is unambiguous — one keyword is enough
 })
 
 # Minimum keyword hits required to commit to a domain (for all other domains)

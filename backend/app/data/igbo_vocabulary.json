@@ -1,0 +1,3235 @@
+{
+  "source": "We Speak Igbo — seed.ts v2.1",
+  "total_lessons": 20,
+  "total_items": 270,
+  "lessons": [
+    {
+      "id": "greetings",
+      "level": "A1",
+      "title": "Greetings",
+      "igboTitle": "Ekele",
+      "grammar": "Ee / Mba (yes / no) and polite words like biko (please).",
+      "objective": "Can greet people, thank them, and say goodbye.",
+      "items": [
+        {
+          "id": "g1",
+          "igbo": "Ndeewo",
+          "english": "Hello (respectful)",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "politeness"
+          ],
+          "example_sentence": "Ndeewo, kedu ka ị dị?",
+          "cultural_note": "Used especially with elders or strangers — shows respect from the first word.",
+          "note": "A polite, general greeting."
+        },
+        {
+          "id": "g2",
+          "igbo": "Kedu",
+          "english": "How are you? / Hello",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "question"
+          ],
+          "example_sentence": "Kedu? Ọ dị mma?"
+        },
+        {
+          "id": "g3",
+          "igbo": "Ọ dị mma",
+          "english": "It's good / I'm fine",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "response"
+          ],
+          "example_sentence": "Ọ dị mma, daalu!"
+        },
+        {
+          "id": "g4",
+          "igbo": "Daalụ",
+          "english": "Thank you",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "politeness"
+          ],
+          "example_sentence": "Daalụ nke ọma.",
+          "cultural_note": "Gratitude is central to Igbo etiquette. \"Daalụ nke ọma\" (thank you very much) signals deep appreciation."
+        },
+        {
+          "id": "g5",
+          "igbo": "Biko",
+          "english": "Please",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "politeness"
+          ],
+          "example_sentence": "Biko, nyere m aka."
+        },
+        {
+          "id": "g6",
+          "igbo": "Ee",
+          "english": "Yes",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "response"
+          ]
+        },
+        {
+          "id": "g7",
+          "igbo": "Mba",
+          "english": "No",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "response"
+          ]
+        },
+        {
+          "id": "g8",
+          "igbo": "Ka ọ dị",
+          "english": "Goodbye / See you",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "farewell"
+          ],
+          "example_sentence": "Ka ọ dị, anọụla."
+        },
+        {
+          "id": "g9",
+          "igbo": "Jide ike",
+          "english": "Stay strong / Take care",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "politeness",
+            "farewell"
+          ],
+          "cultural_note": "A warm farewell blessing — \"hold (your) strength.\""
+        },
+        {
+          "id": "g10",
+          "igbo": "Ọ dị egwu",
+          "english": "Amazing / Wonderful",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "exclamation"
+          ],
+          "example_sentence": "Ọ dị egwu! Imela.",
+          "tone_note": "Egwu here uses high-high tone (music/amazement), distinct from low-high tone meaning fear."
+        },
+        {
+          "id": "g11",
+          "igbo": "Nnọọ",
+          "english": "Welcome",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "hospitality"
+          ]
+        },
+        {
+          "id": "g12",
+          "igbo": "Ka chi fo",
+          "english": "Good morning (may day break well)",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "morning"
+          ]
+        },
+        {
+          "id": "g13",
+          "igbo": "Ka emechaa",
+          "english": "See you later",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "farewell"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "level": "A1",
+      "title": "People & introductions",
+      "igboTitle": "Mmadụ na Nnọchiaha",
+      "grammar": "Subject pronouns m, ị, ọ, anyị, unu, ha. \"Aha m bụ ___\" = \"My name is ___.\"",
+      "objective": "Can use subject pronouns and say your own name.",
+      "items": [
+        {
+          "id": "p1",
+          "igbo": "M",
+          "english": "I / me",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ],
+          "example_sentence": "M bụ nwa Igbo."
+        },
+        {
+          "id": "p2",
+          "igbo": "Gị",
+          "english": "You (singular)",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ]
+        },
+        {
+          "id": "p3",
+          "igbo": "Ya",
+          "english": "He / she / it",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ]
+        },
+        {
+          "id": "p4",
+          "igbo": "Anyị",
+          "english": "We / us",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ]
+        },
+        {
+          "id": "p5",
+          "igbo": "Unu",
+          "english": "You (plural)",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ]
+        },
+        {
+          "id": "p6",
+          "igbo": "Ha",
+          "english": "They / them",
+          "part_of_speech": "pronoun",
+          "difficulty": 1,
+          "tags": [
+            "pronoun",
+            "core"
+          ]
+        },
+        {
+          "id": "p7",
+          "igbo": "Aha",
+          "english": "Name",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "identity"
+          ],
+          "example_sentence": "Aha gị bụ gịnị?"
+        },
+        {
+          "id": "p8",
+          "igbo": "Aha m bụ…",
+          "english": "My name is…",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "introduction",
+            "identity"
+          ],
+          "example_sentence": "Aha m bụ Amara.",
+          "cultural_note": "Igbo names carry deep meaning — \"Amara\" means grace. Asking names is one of the first social rituals.",
+          "note": "Follow with your name."
+        },
+        {
+          "id": "p9",
+          "igbo": "Enyi",
+          "english": "Friend",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "social"
+          ],
+          "example_sentence": "Ọ bụ enyi m.",
+          "cultural_note": "Friendship (enyi) is a social pillar — age-grade groups (otu) form lifelong bonds."
+        },
+        {
+          "id": "p10",
+          "igbo": "Mmadụ",
+          "english": "Person / human being",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "identity",
+            "core"
+          ],
+          "cultural_note": "\"Igbo bu otu\" — \"Igbo is one.\" Mmadụ (person) sits at the heart of Igbo humanist philosophy."
+        },
+        {
+          "id": "p11",
+          "igbo": "Onye",
+          "english": "Person / one who",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "identity",
+            "core"
+          ]
+        },
+        {
+          "id": "p12",
+          "igbo": "Eze",
+          "english": "King",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "title",
+            "culture"
+          ],
+          "tone_note": "Tone-distinguished from Eze meaning tooth/teeth in the body lesson."
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "level": "A1",
+      "title": "Numbers 1–10",
+      "igboTitle": "Ọnụọgụgụ 1–10",
+      "grammar": "Cardinal numbers as standalone words.",
+      "objective": "Can count from 1 to 10.",
+      "items": [
+        {
+          "id": "n1",
+          "igbo": "Otu",
+          "english": "One",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ],
+          "example_sentence": "M nwere otu ji."
+        },
+        {
+          "id": "n2",
+          "igbo": "Abụọ",
+          "english": "Two",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ],
+          "example_sentence": "Ha abụọ dị mma."
+        },
+        {
+          "id": "n3",
+          "igbo": "Atọ",
+          "english": "Three",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n4",
+          "igbo": "Anọ",
+          "english": "Four",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n5",
+          "igbo": "Ise",
+          "english": "Five",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n6",
+          "igbo": "Isii",
+          "english": "Six",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n7",
+          "igbo": "Asaa",
+          "english": "Seven",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n8",
+          "igbo": "Asatọ",
+          "english": "Eight",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ],
+          "cultural_note": "Igbo counting is base-10, but market prices traditionally used cowrie shells."
+        },
+        {
+          "id": "n9",
+          "igbo": "Itoolu",
+          "english": "Nine",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n10",
+          "igbo": "Iri",
+          "english": "Ten",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers2",
+      "level": "A1",
+      "title": "Numbers 11–20",
+      "igboTitle": "Ọnụọgụgụ 11–20",
+      "grammar": "Pattern: iri na + number (ten and + number). Twenty = iri abụọ (two tens).",
+      "objective": "Can count from 11 to 20.",
+      "items": [
+        {
+          "id": "n11",
+          "igbo": "Iri na otu",
+          "english": "Eleven",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n12",
+          "igbo": "Iri na abụọ",
+          "english": "Twelve",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n13",
+          "igbo": "Iri na atọ",
+          "english": "Thirteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n14",
+          "igbo": "Iri na anọ",
+          "english": "Fourteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n15",
+          "igbo": "Iri na ise",
+          "english": "Fifteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n16",
+          "igbo": "Iri na isii",
+          "english": "Sixteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n17",
+          "igbo": "Iri na asaa",
+          "english": "Seventeen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n18",
+          "igbo": "Iri na asatọ",
+          "english": "Eighteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n19",
+          "igbo": "Iri na itoolu",
+          "english": "Nineteen",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ]
+        },
+        {
+          "id": "n20",
+          "igbo": "Iri abụọ",
+          "english": "Twenty",
+          "part_of_speech": "number",
+          "difficulty": 1,
+          "tags": [
+            "number"
+          ],
+          "example_sentence": "Ha nwere iri abụọ ụmụ akwụkwọ."
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "level": "A1",
+      "title": "Family",
+      "igboTitle": "Ezinụlọ",
+      "grammar": "Nouns. Possession (\"my mother\") comes a little later.",
+      "objective": "Can name immediate and extended family members.",
+      "items": [
+        {
+          "id": "f1",
+          "igbo": "Nne",
+          "english": "Mother",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ],
+          "example_sentence": "Nne m dị mma.",
+          "cultural_note": "Nne (mother) is also a term of endearment for older women you respect."
+        },
+        {
+          "id": "f2",
+          "igbo": "Nna",
+          "english": "Father",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ],
+          "example_sentence": "Nna m bụ onye ọrụ.",
+          "cultural_note": "Nna (father) is also an honorific for respected elder men. The family compound (obi) belongs to the Nna figure."
+        },
+        {
+          "id": "f3",
+          "igbo": "Nwa",
+          "english": "Child",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ],
+          "example_sentence": "Nwa ya dị mma.",
+          "cultural_note": "Children (nwa) carry the family name and ancestral lineage forward."
+        },
+        {
+          "id": "f4",
+          "igbo": "Nwoke",
+          "english": "Man / male",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "gender"
+          ],
+          "note": "Compound: nwa nwoke = son."
+        },
+        {
+          "id": "f5",
+          "igbo": "Nwaanyị",
+          "english": "Woman / female",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "gender"
+          ],
+          "cultural_note": "Nwaanyị play a central role in Igbo economy — women historically dominated the market (ahịa) and trade networks.",
+          "note": "nwa nwaanyị = daughter."
+        },
+        {
+          "id": "f6",
+          "igbo": "Nwanne",
+          "english": "Sibling",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ],
+          "example_sentence": "Nwanne m bụ enyi m kacha mma."
+        },
+        {
+          "id": "f7",
+          "igbo": "Di",
+          "english": "Husband",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "marriage"
+          ]
+        },
+        {
+          "id": "f8",
+          "igbo": "Nwunye",
+          "english": "Wife",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "marriage"
+          ]
+        },
+        {
+          "id": "f9",
+          "igbo": "Nne ochie",
+          "english": "Grandmother",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ],
+          "cultural_note": "\"Old mother\" — grandmothers are the keepers of Igbo oral tradition and proverbs."
+        },
+        {
+          "id": "f10",
+          "igbo": "Nna ochie",
+          "english": "Grandfather",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ]
+        },
+        {
+          "id": "f11",
+          "igbo": "Ụmụnna",
+          "english": "Extended family / clan",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "family",
+            "culture",
+            "kinship"
+          ],
+          "cultural_note": "Ụmụnna (fathers\\' children) — the extended patrilineal clan that shares land, names, and responsibility."
+        },
+        {
+          "id": "f12",
+          "igbo": "Ezinụlọ",
+          "english": "Family / household",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "family",
+            "kinship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "level": "A1",
+      "title": "Food & drink",
+      "igboTitle": "Nri na Ihe Ọṅụṅụ",
+      "objective": "Can name common foods and drinks.",
+      "items": [
+        {
+          "id": "d1",
+          "igbo": "Nri",
+          "english": "Food",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food"
+          ],
+          "example_sentence": "Nri dị mma taa."
+        },
+        {
+          "id": "d2",
+          "igbo": "Mmiri",
+          "english": "Water",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "drink",
+            "nature"
+          ],
+          "example_sentence": "M chọrọ mmiri."
+        },
+        {
+          "id": "d3",
+          "igbo": "Ji",
+          "english": "Yam",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "staple"
+          ],
+          "example_sentence": "Ji bụ eze ọjị n\\'ala Igbo.",
+          "cultural_note": "The yam is the king of crops in Igbo culture. The New Yam Festival (Iri Ji Ọhụrụ) is one of the most sacred annual celebrations."
+        },
+        {
+          "id": "d4",
+          "igbo": "Anụ",
+          "english": "Meat",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "protein"
+          ],
+          "example_sentence": "M chọrọ anụ na nri m."
+        },
+        {
+          "id": "d5",
+          "igbo": "Azụ",
+          "english": "Fish",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "protein"
+          ],
+          "example_sentence": "Azụ dị mma n\\'ofe.",
+          "cultural_note": "Fish (azụ) is a staple protein in Igbo cooking, especially dried or smoked in soups."
+        },
+        {
+          "id": "d6",
+          "igbo": "Ọka",
+          "english": "Maize / corn",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "staple"
+          ]
+        },
+        {
+          "id": "d7",
+          "igbo": "Akwụkwọ nri",
+          "english": "Vegetables (leafy)",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "vegetable"
+          ],
+          "cultural_note": "Leafy greens like ugu (fluted pumpkin) and oha are staples in Igbo soups. Akwụkwọ nri literally means \"leaf food.\""
+        },
+        {
+          "id": "d8",
+          "igbo": "Nnu",
+          "english": "Salt",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "seasoning"
+          ]
+        },
+        {
+          "id": "d9",
+          "igbo": "Ọkụkọ",
+          "english": "Chicken",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "animal"
+          ],
+          "example_sentence": "Anyị riri ọkụkọ taa."
+        },
+        {
+          "id": "d10",
+          "igbo": "Ọjị",
+          "english": "Kola nut",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "food",
+            "culture",
+            "ceremony"
+          ],
+          "cultural_note": "The kola nut (ọjị) is sacred in Igbo culture. \"Onye wetara ọjị wetara ndụ\" — \"He who brings kola brings life.\""
+        },
+        {
+          "id": "d11",
+          "igbo": "Mmanya",
+          "english": "Drink / wine",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "drink"
+          ],
+          "example_sentence": "Ọ na-ata mmanya.",
+          "cultural_note": "Palm wine (mmanya ngwo) is a traditional fermented drink central to Igbo ceremonies."
+        },
+        {
+          "id": "d12",
+          "igbo": "Akpụ",
+          "english": "Cassava",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "staple"
+          ]
+        },
+        {
+          "id": "d13",
+          "igbo": "Osikapa",
+          "english": "Rice",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "staple"
+          ]
+        },
+        {
+          "id": "d14",
+          "igbo": "Ose",
+          "english": "Pepper",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "seasoning"
+          ]
+        },
+        {
+          "id": "d15",
+          "igbo": "Mmanụ",
+          "english": "Oil",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "cooking"
+          ]
+        },
+        {
+          "id": "d16",
+          "igbo": "Ube",
+          "english": "African pear",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "fruit"
+          ]
+        },
+        {
+          "id": "d17",
+          "igbo": "Akị",
+          "english": "Palm kernel",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "food",
+            "ingredient"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "level": "A1",
+      "title": "Common verbs",
+      "igboTitle": "Ngwaa",
+      "grammar": "Verbs cited with the i-/ị- infinitive prefix; root carries the meaning.",
+      "objective": "Can recognise and use everyday verbs.",
+      "items": [
+        {
+          "id": "v1",
+          "igbo": "Ịbụ",
+          "english": "To be",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ]
+        },
+        {
+          "id": "v2",
+          "igbo": "Inwe",
+          "english": "To have",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ]
+        },
+        {
+          "id": "v3",
+          "igbo": "Ịga",
+          "english": "To go",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "movement"
+          ],
+          "example_sentence": "M ga-aga ahịa."
+        },
+        {
+          "id": "v4",
+          "igbo": "Ịbịa",
+          "english": "To come",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "movement"
+          ],
+          "example_sentence": "Bịa ebe a!"
+        },
+        {
+          "id": "v5",
+          "igbo": "Iri",
+          "english": "To eat",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "food"
+          ],
+          "example_sentence": "M chọrọ iri nri.",
+          "note": "As in \"iri nri\" — to eat food."
+        },
+        {
+          "id": "v6",
+          "igbo": "Ịṅụ",
+          "english": "To drink",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "food"
+          ],
+          "example_sentence": "Ịṅụ mmiri dị mma.",
+          "tone_note": "Requires ṅ (U+1E45 velar nasal). Distinct from Ịnụ (to hear) — verify font renders ṅ correctly."
+        },
+        {
+          "id": "v7",
+          "igbo": "Ịchọ",
+          "english": "To want",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ]
+        },
+        {
+          "id": "v8",
+          "igbo": "Ịma",
+          "english": "To know",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "cognition"
+          ],
+          "example_sentence": "M maara ya nke ọma."
+        },
+        {
+          "id": "v9",
+          "igbo": "Ịhụ",
+          "english": "To see",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "perception"
+          ]
+        },
+        {
+          "id": "v10",
+          "igbo": "Ịsụ",
+          "english": "To speak",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "communication"
+          ],
+          "example_sentence": "Ọ sụrụ asụsụ Igbo nke ọma.",
+          "cultural_note": "\"Ịsụ asụsụ Igbo\" is more than communication — it is an act of cultural identity.",
+          "note": "As in \"ịsụ asụsụ\" — to speak a language."
+        },
+        {
+          "id": "v11",
+          "igbo": "Ịnọ",
+          "english": "To stay / to be present",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ],
+          "example_sentence": "M nọ n\\'ụlọ."
+        },
+        {
+          "id": "v12",
+          "igbo": "Ịgụ",
+          "english": "To read / to count",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "education"
+          ],
+          "example_sentence": "O gụrụ akwụkwọ ya."
+        },
+        {
+          "id": "v13",
+          "igbo": "Ịdekọ",
+          "english": "To write",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "education"
+          ]
+        },
+        {
+          "id": "v14",
+          "igbo": "Ịrụ ọrụ",
+          "english": "To work",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "work"
+          ],
+          "example_sentence": "Ọ na-arụ ọrụ ugbu a."
+        },
+        {
+          "id": "v15",
+          "igbo": "Ịnụ",
+          "english": "To hear",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "perception"
+          ],
+          "example_sentence": "M nụrụ ya.",
+          "tone_note": "Plain n — distinct from Ịṅụ (to drink) which uses velar nasal ṅ."
+        },
+        {
+          "id": "v16",
+          "igbo": "Ikwu",
+          "english": "To say / tell",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "communication"
+          ]
+        },
+        {
+          "id": "v17",
+          "igbo": "Ịmụ",
+          "english": "To learn",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "education"
+          ]
+        },
+        {
+          "id": "v18",
+          "igbo": "Ịzụta",
+          "english": "To buy",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "commerce"
+          ]
+        },
+        {
+          "id": "v19",
+          "igbo": "Ire",
+          "english": "To sell",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "commerce"
+          ]
+        },
+        {
+          "id": "v20",
+          "igbo": "Inye",
+          "english": "To give",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ]
+        },
+        {
+          "id": "v21",
+          "igbo": "Inweta",
+          "english": "To receive / get",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "core"
+          ]
+        },
+        {
+          "id": "v22",
+          "igbo": "Ije",
+          "english": "To walk",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "movement"
+          ]
+        },
+        {
+          "id": "v23",
+          "igbo": "Ịrahụ",
+          "english": "To sleep",
+          "part_of_speech": "verb",
+          "difficulty": 1,
+          "tags": [
+            "verb",
+            "daily"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "level": "A1",
+      "title": "Questions",
+      "igboTitle": "Ajụjụ",
+      "grammar": "Question words usually open the sentence.",
+      "objective": "Can ask simple question-word questions.",
+      "items": [
+        {
+          "id": "q1",
+          "igbo": "Gịnị",
+          "english": "What",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "Gịnị bụ aha gị?"
+        },
+        {
+          "id": "q2",
+          "igbo": "Onye",
+          "english": "Who",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "Onye bụ ya?"
+        },
+        {
+          "id": "q3",
+          "igbo": "Ebee",
+          "english": "Where",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "Ebee ka i bi?"
+        },
+        {
+          "id": "q4",
+          "igbo": "Kedu",
+          "english": "How / how is",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "Kedu ka ọ dị?",
+          "note": "Also used as a greeting."
+        },
+        {
+          "id": "q5",
+          "igbo": "Ole",
+          "english": "How much / how many",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question",
+            "number"
+          ],
+          "example_sentence": "Ole ka ọ bara?"
+        },
+        {
+          "id": "q6",
+          "igbo": "Mgbe ole",
+          "english": "When",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question",
+            "time"
+          ],
+          "example_sentence": "Mgbe ole ka i ga-abịa?"
+        },
+        {
+          "id": "q7",
+          "igbo": "N\\'ihi gịnị",
+          "english": "Why",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "N\\'ihi gịnị i gaara?"
+        },
+        {
+          "id": "q8",
+          "igbo": "Otú ọ dị",
+          "english": "How (manner)",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "question"
+          ],
+          "example_sentence": "Otú ọ dị, ọ dị mma?"
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "level": "A1",
+      "title": "The body",
+      "igboTitle": "Ahụ mmadụ",
+      "objective": "Can name the main parts of the human body.",
+      "items": [
+        {
+          "id": "b1",
+          "igbo": "Ahụ",
+          "english": "Body",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b2",
+          "igbo": "Isi",
+          "english": "Head",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "example_sentence": "Isi ya dị ya mma."
+        },
+        {
+          "id": "b3",
+          "igbo": "Anya",
+          "english": "Eye",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "example_sentence": "Anya ya dị ọkụ.",
+          "cultural_note": "Anya (eye) also appears in the word for love: ịhụnanya — literally \"to see with love.\""
+        },
+        {
+          "id": "b4",
+          "igbo": "Ọnụ",
+          "english": "Mouth",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b5",
+          "igbo": "Ntị",
+          "english": "Ear",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "example_sentence": "Ọ nọ na-ege ntị.",
+          "tone_note": "Standard spelling is Ntị (with ị), not Nti."
+        },
+        {
+          "id": "b6",
+          "igbo": "Imi",
+          "english": "Nose",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b7",
+          "igbo": "Aka",
+          "english": "Hand / arm",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "example_sentence": "Ọ jidere ya n\\'aka."
+        },
+        {
+          "id": "b8",
+          "igbo": "Ụkwụ",
+          "english": "Leg / foot",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b9",
+          "igbo": "Obi",
+          "english": "Heart / chest",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body",
+            "emotion"
+          ],
+          "cultural_note": "\"Obi\" also means the main hall of the family compound — the emotional and physical centre of a household."
+        },
+        {
+          "id": "b10",
+          "igbo": "Afọ",
+          "english": "Belly / stomach",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "tone_note": "Same spelling as Afọ (year) and Afọ (market day) — tone-distinguished."
+        },
+        {
+          "id": "b11",
+          "igbo": "Ọbara",
+          "english": "Blood",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "cultural_note": "Blood (ọbara) is central to Igbo kinship and sacrifice traditions."
+        },
+        {
+          "id": "b12",
+          "igbo": "Eze",
+          "english": "Tooth / teeth",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "tone_note": "Tone-distinguished from Eze meaning king (people lesson)."
+        },
+        {
+          "id": "b13",
+          "igbo": "Ihu",
+          "english": "Face",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b14",
+          "igbo": "Mkpịsị aka",
+          "english": "Finger",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ]
+        },
+        {
+          "id": "b15",
+          "igbo": "Azụ",
+          "english": "Back (of body)",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "body"
+          ],
+          "tone_note": "Same romanisation as Azụ (fish) in the food lesson — tone-distinguished."
+        },
+        {
+          "id": "b16",
+          "igbo": "Olu",
+          "english": "Neck / voice",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "body"
+          ],
+          "tone_note": "Carries both neck and voice meanings — tone-distinguished."
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "level": "A1",
+      "title": "Time & days",
+      "igboTitle": "Oge na Ụbọchị",
+      "grammar": "Time words often precede the sentence they modify.",
+      "objective": "Can describe when something happens.",
+      "items": [
+        {
+          "id": "t1",
+          "igbo": "Ụtụtụ",
+          "english": "Morning",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "example_sentence": "Ụtụtụ ọma!"
+        },
+        {
+          "id": "t2",
+          "igbo": "Ehihie",
+          "english": "Afternoon / noon",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "t3",
+          "igbo": "Mgbede",
+          "english": "Evening",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "t4",
+          "igbo": "Anyasị",
+          "english": "Night",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "tone_note": "Correctly translated as night, not evening. Evening = Mgbede."
+        },
+        {
+          "id": "t5",
+          "igbo": "Taa",
+          "english": "Today",
+          "part_of_speech": "adverb",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "example_sentence": "Taa dị mma."
+        },
+        {
+          "id": "t6",
+          "igbo": "Echi",
+          "english": "Tomorrow",
+          "part_of_speech": "adverb",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "example_sentence": "Echi ka anyị ga-abịa."
+        },
+        {
+          "id": "t7",
+          "igbo": "Ụnyaahụ",
+          "english": "Yesterday",
+          "part_of_speech": "adverb",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "tone_note": "Double-a is correct standard Onwu spelling."
+        },
+        {
+          "id": "t8",
+          "igbo": "Oge",
+          "english": "Time / season",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "example_sentence": "Oge adịghị eche mmadụ."
+        },
+        {
+          "id": "t9",
+          "igbo": "Afọ",
+          "english": "Year",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "tone_note": "Same spelling as Afọ (belly) and Afọ (market day) — tone-distinguished."
+        },
+        {
+          "id": "t10",
+          "igbo": "Ọnwa",
+          "english": "Month / moon",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time",
+            "nature"
+          ],
+          "cultural_note": "New-moon nights marked community gatherings.",
+          "tone_note": "Same word for both month and moon — dual meaning reflects the lunar calendar."
+        },
+        {
+          "id": "t11",
+          "igbo": "Eke",
+          "english": "Eke market day",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "time",
+            "culture",
+            "market"
+          ],
+          "cultural_note": "Traditional Igbo week has 4 days: Eke, Orie, Afọ, Nkwọ. These cycle and define local identity."
+        },
+        {
+          "id": "t12",
+          "igbo": "Nkwọ",
+          "english": "Nkwọ market day",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "time",
+            "culture",
+            "market"
+          ]
+        },
+        {
+          "id": "t13",
+          "igbo": "Abalị",
+          "english": "Night (also common)",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "time"
+          ],
+          "note": "Variant of Anyasị — both are widely used for night/darkness."
+        }
+      ]
+    },
+    {
+      "id": "places",
+      "level": "A1",
+      "title": "Places",
+      "igboTitle": "Ebe dị iche iche",
+      "objective": "Can name and describe common places.",
+      "items": [
+        {
+          "id": "pl1",
+          "igbo": "Ụlọ",
+          "english": "House / home",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place"
+          ],
+          "example_sentence": "M lọtara ụlọ."
+        },
+        {
+          "id": "pl2",
+          "igbo": "Ahịa",
+          "english": "Market",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "commerce"
+          ],
+          "example_sentence": "M ga-aga ahịa taa.",
+          "cultural_note": "The market (ahịa) is the social and economic heart of Igbo communities — historically women-run."
+        },
+        {
+          "id": "pl3",
+          "igbo": "Ụlọ akwụkwọ",
+          "english": "School",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "education"
+          ],
+          "example_sentence": "Ha nọ n\\'ụlọ akwụkwọ."
+        },
+        {
+          "id": "pl4",
+          "igbo": "Ụzọ",
+          "english": "Road / path",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "movement"
+          ],
+          "example_sentence": "Ụzọ a dị ogologo."
+        },
+        {
+          "id": "pl5",
+          "igbo": "Ọhịa",
+          "english": "Forest / bush",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "nature"
+          ],
+          "cultural_note": "The forest (ọhịa) in Igbo cosmology is home to spirits and medicines — a place of power and respect."
+        },
+        {
+          "id": "pl6",
+          "igbo": "Obodo",
+          "english": "Town / community / home-place",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "community"
+          ],
+          "cultural_note": "Obodo encompasses your hometown and the broader nation — \"Obodo Igbo\" means Igboland."
+        },
+        {
+          "id": "pl7",
+          "igbo": "Ugwu",
+          "english": "Hill / mountain",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "nature"
+          ]
+        },
+        {
+          "id": "pl8",
+          "igbo": "Ala",
+          "english": "Land / ground",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "nature"
+          ],
+          "cultural_note": "Ala (earth/land) is also the Igbo earth goddess — arguably the most important deity in traditional religion."
+        },
+        {
+          "id": "pl9",
+          "igbo": "Ụlọ nri",
+          "english": "Kitchen",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "home"
+          ]
+        },
+        {
+          "id": "pl10",
+          "igbo": "Ọnụ ụzọ",
+          "english": "Doorway / entrance",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "home"
+          ],
+          "note": "Literally \"mouth of the road.\""
+        },
+        {
+          "id": "pl11",
+          "igbo": "Ụlọ ọgwụ",
+          "english": "Hospital",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "health"
+          ]
+        },
+        {
+          "id": "pl12",
+          "igbo": "Ụlọ ahịa",
+          "english": "Shop",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "commerce"
+          ]
+        },
+        {
+          "id": "pl13",
+          "igbo": "Ụka",
+          "english": "Church",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "place",
+            "community"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "feelings",
+      "level": "A1",
+      "title": "Feelings & emotions",
+      "igboTitle": "Mmetụta Obi",
+      "objective": "Can express basic emotions.",
+      "items": [
+        {
+          "id": "em1",
+          "igbo": "Obi ụtọ",
+          "english": "Happiness / joy",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ],
+          "example_sentence": "Obi ụtọ dị m.",
+          "cultural_note": "\"Sweet heart\" — Igbo expressions for joy are often heart-centred."
+        },
+        {
+          "id": "em2",
+          "igbo": "Mwute",
+          "english": "Sadness / grief",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ]
+        },
+        {
+          "id": "em2b",
+          "igbo": "Obi ọjọọ",
+          "english": "Bad feeling / low mood",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ],
+          "note": "Conversational phrase for a bad or heavy heart — less formal than Mwute."
+        },
+        {
+          "id": "em3",
+          "igbo": "Iwe",
+          "english": "Anger",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ],
+          "example_sentence": "Iwe dị ya."
+        },
+        {
+          "id": "em4",
+          "igbo": "Egwu",
+          "english": "Fear",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ],
+          "example_sentence": "Egwu dị m.",
+          "tone_note": "Low-high tone = fear. High-high tone = music/dance. Audio required to distinguish."
+        },
+        {
+          "id": "em5",
+          "igbo": "Ịhụnanya",
+          "english": "Love",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ],
+          "cultural_note": "Ịhụnanya — \"to see with (eyes of) love.\" The word for love contains anya (eye): to love is to see deeply."
+        },
+        {
+          "id": "em6",
+          "igbo": "Ọchịchọ",
+          "english": "Desire / longing",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ]
+        },
+        {
+          "id": "em7",
+          "igbo": "Nwayọọ",
+          "english": "Calm / gentleness / slowly",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "emotion",
+            "manner"
+          ],
+          "example_sentence": "Nwayọọ, nwayọọ.",
+          "cultural_note": "\"Slowly, slowly\" — patience (nwayọọ) is deeply valued in Igbo culture."
+        },
+        {
+          "id": "em8",
+          "igbo": "Ụtọ",
+          "english": "Sweetness / pleasure",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "emotion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "level": "A1",
+      "title": "Nature & animals",
+      "igboTitle": "Okike na Anụmanụ",
+      "objective": "Can name elements of nature and common animals.",
+      "items": [
+        {
+          "id": "nat1",
+          "igbo": "Anyanwụ",
+          "english": "Sun",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ],
+          "cultural_note": "Anyanwụ literally means \"eye of light\" — anya (eye) + anwụ (light/fire). A poetic Igbo compound."
+        },
+        {
+          "id": "nat2",
+          "igbo": "Ọnwa",
+          "english": "Moon",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ],
+          "tone_note": "Same word as Ọnwa (month) — dual meaning reflecting the lunar calendar."
+        },
+        {
+          "id": "nat3",
+          "igbo": "Kpakpando",
+          "english": "Star",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ]
+        },
+        {
+          "id": "nat4",
+          "igbo": "Igwe",
+          "english": "Sky / iron / thunder",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "nature"
+          ],
+          "cultural_note": "Igwe means sky, but also iron and the title for a king. The sky-king connection is ancient.",
+          "tone_note": "Multiple meanings — tone-distinguished. Also a title for a king."
+        },
+        {
+          "id": "nat5",
+          "igbo": "Mmiri ozuzo",
+          "english": "Rain",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature",
+            "weather"
+          ]
+        },
+        {
+          "id": "nat6",
+          "igbo": "Ikuku",
+          "english": "Wind / air",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature",
+            "weather"
+          ]
+        },
+        {
+          "id": "nat7",
+          "igbo": "Ọkụ",
+          "english": "Fire",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ],
+          "tone_note": "Same spelling as Ọkụ (hot/adjective) — tone-distinguished."
+        },
+        {
+          "id": "nat8",
+          "igbo": "Osisi",
+          "english": "Tree",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ]
+        },
+        {
+          "id": "nat9",
+          "igbo": "Ifuru",
+          "english": "Flower",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ],
+          "note": "Standard Igbo; dialectal variant is Okoko osisi."
+        },
+        {
+          "id": "nat10",
+          "igbo": "Akwụkwọ",
+          "english": "Leaf",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ],
+          "tone_note": "Also means book/paper — context-distinguished."
+        },
+        {
+          "id": "nat11",
+          "igbo": "Nkume",
+          "english": "Stone",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ]
+        },
+        {
+          "id": "nat12",
+          "igbo": "Osimiri",
+          "english": "River / large water body",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ]
+        },
+        {
+          "id": "nat13",
+          "igbo": "Nkịta",
+          "english": "Dog",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ]
+        },
+        {
+          "id": "nat14",
+          "igbo": "Pusi",
+          "english": "Cat",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ],
+          "note": "Loanword adapted from English."
+        },
+        {
+          "id": "nat15",
+          "igbo": "Ehi",
+          "english": "Cow",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ],
+          "note": "Standard form; Efi is a dialectal variant."
+        },
+        {
+          "id": "nat16",
+          "igbo": "Ewu",
+          "english": "Goat",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ],
+          "cultural_note": "Goats (ewu) are the most common sacrificial animal in Igbo ceremonies. \"Ewu ojii\" (black goat) carries special ritual significance."
+        },
+        {
+          "id": "nat17",
+          "igbo": "Atụrụ",
+          "english": "Sheep",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ]
+        },
+        {
+          "id": "nat18",
+          "igbo": "Ọkụkọ",
+          "english": "Chicken",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal",
+            "food"
+          ]
+        },
+        {
+          "id": "nat19",
+          "igbo": "Nnụnụ",
+          "english": "Bird",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ]
+        },
+        {
+          "id": "nat20",
+          "igbo": "Enwe",
+          "english": "Monkey",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ]
+        },
+        {
+          "id": "nat21",
+          "igbo": "Agụ",
+          "english": "Leopard",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ]
+        },
+        {
+          "id": "nat22",
+          "igbo": "Odụm",
+          "english": "Lion",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "animal"
+          ],
+          "cultural_note": "The lion (odụm) symbolises royalty and courage in Igbo proverbs."
+        },
+        {
+          "id": "nat23",
+          "igbo": "Ụda",
+          "english": "Sound / noise",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "nature"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "level": "A1",
+      "title": "Describing things",
+      "igboTitle": "Nsọpụrụ",
+      "grammar": "Adjectives in Igbo typically follow the noun they modify.",
+      "objective": "Can describe basic qualities of nouns.",
+      "items": [
+        {
+          "id": "adj1",
+          "igbo": "Ọma",
+          "english": "Good / fine",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ],
+          "example_sentence": "Ọ bụ mmadụ ọma."
+        },
+        {
+          "id": "adj2",
+          "igbo": "Ọjọọ",
+          "english": "Bad",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ]
+        },
+        {
+          "id": "adj3",
+          "igbo": "Ukwuu",
+          "english": "Big / great",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "size"
+          ],
+          "example_sentence": "Ụlọ a dị ukwuu."
+        },
+        {
+          "id": "adj4",
+          "igbo": "Obere",
+          "english": "Small",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "size"
+          ],
+          "example_sentence": "Nwa a dị obere."
+        },
+        {
+          "id": "adj4b",
+          "igbo": "Ntakịrị",
+          "english": "Tiny / a little / small amount",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "size"
+          ],
+          "note": "Colloquial/diminutive — more emphatic than Obere. Also used as an adverb meaning \"a little.\""
+        },
+        {
+          "id": "adj5",
+          "igbo": "Ọhụrụ",
+          "english": "New",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ]
+        },
+        {
+          "id": "adj6",
+          "igbo": "Ochie",
+          "english": "Old / ancient",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ],
+          "cultural_note": "Ochie carries reverence — \"omenala ochie\" (old customs) refers to sacred ancestral traditions."
+        },
+        {
+          "id": "adj7",
+          "igbo": "Mma",
+          "english": "Beautiful / good",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ],
+          "example_sentence": "Ọ mma nke ukwuu."
+        },
+        {
+          "id": "adj8",
+          "igbo": "Ike",
+          "english": "Strong / hard",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective"
+          ],
+          "example_sentence": "Jide ike.",
+          "tone_note": "Tone-distinguished from Ike (power/strength as noun) and Ike (buttocks)."
+        },
+        {
+          "id": "adj9",
+          "igbo": "Ọcha",
+          "english": "Clean / white / pure",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "color"
+          ],
+          "cultural_note": "Ọcha implies purity in both physical and spiritual senses — ritually clean objects are called \"ihe ọcha.\""
+        },
+        {
+          "id": "adj10",
+          "igbo": "Ogologo",
+          "english": "Long / tall",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "size"
+          ]
+        },
+        {
+          "id": "adj11",
+          "igbo": "Ngwangwa",
+          "english": "Fast",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "speed"
+          ]
+        },
+        {
+          "id": "adj12",
+          "igbo": "Oyi",
+          "english": "Cold",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "temperature"
+          ]
+        },
+        {
+          "id": "adj13",
+          "igbo": "Ọkụ",
+          "english": "Hot",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "temperature"
+          ],
+          "tone_note": "Same spelling as Ọkụ (fire/noun) — tone-distinguished."
+        },
+        {
+          "id": "adj14",
+          "igbo": "Ojii",
+          "english": "Black",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "color"
+          ]
+        },
+        {
+          "id": "adj15",
+          "igbo": "Uhie",
+          "english": "Red",
+          "part_of_speech": "adjective",
+          "difficulty": 1,
+          "tags": [
+            "adjective",
+            "color"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "level": "A1",
+      "title": "Home & objects",
+      "igboTitle": "Ụlọ na Ihe",
+      "objective": "Can name common household objects and items of clothing.",
+      "items": [
+        {
+          "id": "h1",
+          "igbo": "Ụlọ",
+          "english": "House / home",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home"
+          ]
+        },
+        {
+          "id": "h2",
+          "igbo": "Ụzọ",
+          "english": "Door / road / path",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "place"
+          ]
+        },
+        {
+          "id": "h3",
+          "igbo": "Tebụl",
+          "english": "Table",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "furniture"
+          ],
+          "note": "Loanword adapted from English."
+        },
+        {
+          "id": "h4",
+          "igbo": "Oche",
+          "english": "Chair",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "furniture"
+          ]
+        },
+        {
+          "id": "h5",
+          "igbo": "Akwụkwọ",
+          "english": "Book / paper",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "education"
+          ],
+          "tone_note": "Also means leaf — context-distinguished."
+        },
+        {
+          "id": "h6",
+          "igbo": "Akpa",
+          "english": "Bag",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "object"
+          ]
+        },
+        {
+          "id": "h7",
+          "igbo": "Uwe",
+          "english": "Cloth / clothing",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "clothing"
+          ]
+        },
+        {
+          "id": "h8",
+          "igbo": "Akpụkpọ ụkwụ",
+          "english": "Shoe",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "clothing"
+          ]
+        },
+        {
+          "id": "h9",
+          "igbo": "Igodo",
+          "english": "Key",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "object"
+          ]
+        },
+        {
+          "id": "h10",
+          "igbo": "Oriọna",
+          "english": "Lamp / candle",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "object"
+          ],
+          "note": "Traditional palm-fibre lamp."
+        },
+        {
+          "id": "h11",
+          "igbo": "Mpio",
+          "english": "Window",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "object"
+          ]
+        },
+        {
+          "id": "h12",
+          "igbo": "Efere",
+          "english": "Plate",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "dining"
+          ]
+        },
+        {
+          "id": "h13",
+          "igbo": "Iko",
+          "english": "Cup",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "dining"
+          ]
+        },
+        {
+          "id": "h14",
+          "igbo": "Ngaji",
+          "english": "Spoon",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "home",
+            "dining"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "level": "A1",
+      "title": "School & learning",
+      "igboTitle": "Mmụta",
+      "objective": "Can talk about school, learning, and language.",
+      "items": [
+        {
+          "id": "ed1",
+          "igbo": "Ụlọ akwụkwọ",
+          "english": "School",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education",
+            "place"
+          ]
+        },
+        {
+          "id": "ed2",
+          "igbo": "Mmụta",
+          "english": "Learning / education",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education"
+          ]
+        },
+        {
+          "id": "ed3",
+          "igbo": "Nwa akwụkwọ",
+          "english": "Student",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education",
+            "person"
+          ]
+        },
+        {
+          "id": "ed4",
+          "igbo": "Onye nkuzi",
+          "english": "Teacher",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education",
+            "person"
+          ]
+        },
+        {
+          "id": "ed5",
+          "igbo": "Nkụzi",
+          "english": "Teaching / lesson",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education"
+          ]
+        },
+        {
+          "id": "ed6",
+          "igbo": "Okwu",
+          "english": "Word",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education",
+            "language"
+          ]
+        },
+        {
+          "id": "ed7",
+          "igbo": "Asụsụ",
+          "english": "Language",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "education",
+            "language"
+          ]
+        },
+        {
+          "id": "ed8",
+          "igbo": "Mkpụrụedemede",
+          "english": "Letter / alphabet character",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "education",
+            "language"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "level": "A1",
+      "title": "Community & daily life",
+      "igboTitle": "Ndụ Obodo",
+      "objective": "Can describe everyday community life and activities.",
+      "items": [
+        {
+          "id": "c1",
+          "igbo": "Ọrụ",
+          "english": "Work",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "community",
+            "work"
+          ]
+        },
+        {
+          "id": "c2",
+          "igbo": "Ego",
+          "english": "Money",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "community",
+            "commerce"
+          ]
+        },
+        {
+          "id": "c3",
+          "igbo": "Ndị mmadụ",
+          "english": "People",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "community"
+          ]
+        },
+        {
+          "id": "c4",
+          "igbo": "Nzukọ",
+          "english": "Meeting",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "community",
+            "social"
+          ]
+        },
+        {
+          "id": "c5",
+          "igbo": "Udo",
+          "english": "Peace",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "community",
+            "abstract"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "level": "A2",
+      "title": "Abstract concepts",
+      "igboTitle": "Echiche",
+      "objective": "Can express abstract ideas about life, belief, and values.",
+      "items": [
+        {
+          "id": "ab1",
+          "igbo": "Chi",
+          "english": "Personal spirit / God",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "abstract",
+            "culture",
+            "spirituality"
+          ],
+          "cultural_note": "Chi is your personal spirit and destiny — deeply embedded in Igbo worldview."
+        },
+        {
+          "id": "ab2",
+          "igbo": "Chineke",
+          "english": "God / Creator",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "culture",
+            "spirituality"
+          ]
+        },
+        {
+          "id": "ab3",
+          "igbo": "Ndụ",
+          "english": "Life",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "core"
+          ]
+        },
+        {
+          "id": "ab4",
+          "igbo": "Ọnwụ",
+          "english": "Death",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab5",
+          "igbo": "Uche",
+          "english": "Mind / thought",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "cognition"
+          ]
+        },
+        {
+          "id": "ab6",
+          "igbo": "Echiche",
+          "english": "Idea / thought",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "cognition"
+          ]
+        },
+        {
+          "id": "ab7",
+          "igbo": "Okwukwe",
+          "english": "Belief / faith",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "spirituality"
+          ]
+        },
+        {
+          "id": "ab8",
+          "igbo": "Eziokwu",
+          "english": "Truth",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab9",
+          "igbo": "Ụgha",
+          "english": "Lie / falsehood",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab10",
+          "igbo": "Amamihe",
+          "english": "Wisdom",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab11",
+          "igbo": "Ndidi",
+          "english": "Patience",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "virtue"
+          ]
+        },
+        {
+          "id": "ab12",
+          "igbo": "Ike",
+          "english": "Strength / power",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ],
+          "tone_note": "Tone-distinguished from Ike (adjective: strong/hard) and Ike (buttocks)."
+        },
+        {
+          "id": "ab13",
+          "igbo": "Ncheta",
+          "english": "Memory / remembrance",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "cognition"
+          ]
+        },
+        {
+          "id": "ab14",
+          "igbo": "Ọganihu",
+          "english": "Progress",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab15",
+          "igbo": "Olileanya",
+          "english": "Hope",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "emotion"
+          ]
+        },
+        {
+          "id": "ab16",
+          "igbo": "Mmasị",
+          "english": "Interest / desire",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "emotion"
+          ]
+        },
+        {
+          "id": "ab17",
+          "igbo": "Nsọ",
+          "english": "Holy / sacred",
+          "part_of_speech": "adjective",
+          "difficulty": 2,
+          "tags": [
+            "abstract",
+            "culture",
+            "spirituality"
+          ]
+        },
+        {
+          "id": "ab18",
+          "igbo": "Akụ",
+          "english": "Wealth",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "commerce"
+          ]
+        },
+        {
+          "id": "ab19",
+          "igbo": "Aha",
+          "english": "Name / reputation",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "identity"
+          ]
+        },
+        {
+          "id": "ab20",
+          "igbo": "Egwu",
+          "english": "Music / dance / song",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "culture",
+            "art"
+          ],
+          "tone_note": "High-high tone = music/dance. Low-high tone = fear. Audio required to distinguish."
+        },
+        {
+          "id": "ab21",
+          "igbo": "Nsogbu",
+          "english": "Problem",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract"
+          ]
+        },
+        {
+          "id": "ab22",
+          "igbo": "Azịza",
+          "english": "Answer",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "education"
+          ]
+        },
+        {
+          "id": "ab23",
+          "igbo": "Ajụjụ",
+          "english": "Question",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "education"
+          ]
+        },
+        {
+          "id": "ab24",
+          "igbo": "Ozi",
+          "english": "Message / news",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "communication"
+          ]
+        },
+        {
+          "id": "ab25",
+          "igbo": "Ọgwụ",
+          "english": "Medicine",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "health"
+          ]
+        },
+        {
+          "id": "ab26",
+          "igbo": "Ahụike",
+          "english": "Health",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "health"
+          ]
+        },
+        {
+          "id": "ab27",
+          "igbo": "Enyemaka",
+          "english": "Help",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "abstract",
+            "social"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "level": "A2",
+      "title": "Market & Salutations",
+      "igboTitle": "Ahịa na Ekele",
+      "grammar": "Ọma (\"good\") follows a time-of-day noun to form a greeting: Ụtụtụ + ọma = good morning.",
+      "objective": "Can bargain in the market and use time-specific and respectful greetings.",
+      "items": [
+        {
+          "id": "mkt1",
+          "igbo": "Kedu ọnụ?",
+          "english": "What is the price?",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "market",
+            "commerce"
+          ],
+          "note": "Standard market opener."
+        },
+        {
+          "id": "mkt2",
+          "igbo": "Ego ole?",
+          "english": "How much?",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "market",
+            "commerce",
+            "question"
+          ],
+          "note": "The most common price question — pairs with Ole (how much/many) in the Questions lesson."
+        },
+        {
+          "id": "mkt3",
+          "igbo": "Biko, nwekwuo ọnụ ahịa",
+          "english": "Please, reduce the price",
+          "part_of_speech": "expression",
+          "difficulty": 2,
+          "tags": [
+            "market",
+            "commerce",
+            "politeness"
+          ],
+          "note": "Core bargaining phrase."
+        },
+        {
+          "id": "mkt4",
+          "igbo": "Ọ dịghị mma",
+          "english": "It is not good",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "market",
+            "commerce"
+          ],
+          "note": "Bargaining pushback — \"that price isn\\'t good.\""
+        },
+        {
+          "id": "mkt5",
+          "igbo": "Ọ bụ ego kpamkpam?",
+          "english": "Is this the final price?",
+          "part_of_speech": "question_word",
+          "difficulty": 2,
+          "tags": [
+            "market",
+            "commerce",
+            "question"
+          ],
+          "note": "Closing-the-deal phrase."
+        },
+        {
+          "id": "mkt6",
+          "igbo": "Achọrọ m ihe dị ọnụ ala",
+          "english": "I want something cheaper",
+          "part_of_speech": "expression",
+          "difficulty": 2,
+          "tags": [
+            "market",
+            "commerce"
+          ]
+        },
+        {
+          "id": "mkt7",
+          "igbo": "Ị nwere nke ọzọ?",
+          "english": "Do you have another one?",
+          "part_of_speech": "question_word",
+          "difficulty": 1,
+          "tags": [
+            "market",
+            "commerce",
+            "question"
+          ]
+        },
+        {
+          "id": "mkt8",
+          "igbo": "Onye ahịa",
+          "english": "Customer",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "market",
+            "commerce",
+            "person"
+          ],
+          "note": "How vendors address buyers."
+        },
+        {
+          "id": "mkt9",
+          "igbo": "Aga m alaghachi",
+          "english": "I will come back later",
+          "part_of_speech": "expression",
+          "difficulty": 2,
+          "tags": [
+            "market",
+            "commerce"
+          ],
+          "note": "Polite way to end negotiation without buying."
+        },
+        {
+          "id": "mkt10",
+          "igbo": "Ụtụtụ ọma",
+          "english": "Good morning",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "time"
+          ],
+          "note": "Time-specific greeting variant — complements Ka chi fo in the Greetings lesson."
+        },
+        {
+          "id": "mkt11",
+          "igbo": "Ehihie ọma",
+          "english": "Good afternoon",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "time"
+          ]
+        },
+        {
+          "id": "mkt12",
+          "igbo": "Mgbede ọma",
+          "english": "Good evening",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "time"
+          ]
+        },
+        {
+          "id": "mkt13",
+          "igbo": "Abalị ọma",
+          "english": "Good night",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "greeting",
+            "time"
+          ],
+          "note": "Pairs with Abalị (night) in the Time & Days lesson."
+        },
+        {
+          "id": "mkt14",
+          "igbo": "Nna",
+          "english": "Sir / respected elder man",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "address",
+            "respect"
+          ],
+          "note": "Respectful address term — the same word literally means \"father\" (see Family lesson); context distinguishes."
+        },
+        {
+          "id": "mkt15",
+          "igbo": "Nne",
+          "english": "Madam / respected elder woman",
+          "part_of_speech": "noun",
+          "difficulty": 1,
+          "tags": [
+            "address",
+            "respect"
+          ],
+          "note": "Respectful address term — the same word literally means \"mother\" (see Family lesson); context distinguishes."
+        },
+        {
+          "id": "mkt16",
+          "igbo": "Odera",
+          "english": "Older brother (respectful address)",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "address",
+            "respect",
+            "family"
+          ]
+        },
+        {
+          "id": "mkt17",
+          "igbo": "Ada",
+          "english": "Older sister (respectful address)",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "address",
+            "respect",
+            "family"
+          ],
+          "cultural_note": "Also the title given to a first daughter."
+        },
+        {
+          "id": "mkt18",
+          "igbo": "Nwanne m",
+          "english": "My friend / my kin",
+          "part_of_speech": "expression",
+          "difficulty": 1,
+          "tags": [
+            "address",
+            "social"
+          ],
+          "note": "Warm peer-to-peer address — extends Nwanne (sibling) from the Family lesson."
+        },
+        {
+          "id": "mkt19",
+          "igbo": "Kwenu",
+          "english": "Call of communal affirmation",
+          "part_of_speech": "expression",
+          "difficulty": 2,
+          "tags": [
+            "culture",
+            "ceremony"
+          ],
+          "cultural_note": "A call-and-response shout at gatherings and ceremonies, traditionally answered \"Yaa!\" by the crowd — one of the most recognisable public expressions in Igbo culture."
+        },
+        {
+          "id": "mkt20",
+          "igbo": "Ndichie",
+          "english": "Elders (collective)",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "culture",
+            "community"
+          ],
+          "note": "The council of elders."
+        },
+        {
+          "id": "mkt21",
+          "igbo": "Ilo",
+          "english": "Village square / assembly ground",
+          "part_of_speech": "noun",
+          "difficulty": 2,
+          "tags": [
+            "culture",
+            "place",
+            "community"
+          ],
+          "cultural_note": "Where communal gatherings, dispute resolution, and proverbs are traditionally spoken."
+        }
+      ]
+    },
+    {
+      "id": "proverbs",
+      "level": "A2",
+      "title": "Proverbs",
+      "igboTitle": "Ilu",
+      "objective": "Can understand and explain 13 core Igbo proverbs and their cultural meaning.",
+      "items": []
+    }
+  ]
+}

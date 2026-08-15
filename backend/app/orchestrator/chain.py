@@ -1,4 +1,5 @@
 from app.agents.builder import BUILDER_SYSTEM
+from app.agents.igbo_agent import IGBO_SYSTEM
 from app.agents.update_agent import UPDATE_INTEL_SYSTEM
 from app.agents.business_agent import BUSINESS_SYSTEM
 from app.agents.ecommerce_market_agent import ECOMMERCE_SYSTEM
@@ -110,6 +111,15 @@ def resolve_system(agent_name: str, domain: str, user_input: str = "") -> tuple[
 
     if domain == "forge":
         return WEB_BUILDER_SYSTEM, "forge"
+
+    if domain == "igbo":
+        from app.services.igbo_knowledge import build_context
+        try:
+            ctx = build_context(user_input)
+            system = f"{IGBO_SYSTEM}\n{ctx}" if ctx else IGBO_SYSTEM
+        except Exception:
+            system = IGBO_SYSTEM
+        return system, "igbo"
 
     if domain == "update_intel":
         from app.api.update_routes import update_check
