@@ -11,6 +11,7 @@ from pathlib import Path
 from functools import lru_cache
 
 _DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "igbo_vocabulary.json"
+_LEARNED_PATH = Path(__file__).resolve().parents[1] / "data" / "igbo_learned.json"
 
 _MAX_INJECT_ITEMS = 20  # cap context window usage
 
@@ -23,12 +24,26 @@ def _load() -> dict:
         return json.load(f)
 
 
+def _load_learned() -> list[dict]:
+    """Load continuously-learned words (separate from seed data)."""
+    if not _LEARNED_PATH.exists():
+        return []
+    try:
+        data = json.loads(_LEARNED_PATH.read_text(encoding="utf-8"))
+        return data.get("items", [])
+    except Exception:
+        return []
+
+
 def _all_items() -> list[dict]:
     data = _load()
     items = []
     for lesson in data.get("lessons", []):
         for item in lesson.get("items", []):
             items.append({**item, "_lesson_id": lesson["id"], "_lesson_title": lesson["title"]})
+    # Append learned items (no lesson association)
+    for item in _load_learned():
+        items.append({**item, "_lesson_id": "learned", "_lesson_title": "Continuously Learned"})
     return items
 
 

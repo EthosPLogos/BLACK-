@@ -10,6 +10,7 @@ from starlette.responses import JSONResponse
 
 from app.api.approval_routes import router as approval_router
 from app.api.finance_research_routes import router as finance_research_router
+from app.api.igbo_routes import router as igbo_router
 from app.api.forge_routes import router as forge_router
 from app.api.update_routes import router as update_router
 from app.api.job_apply_routes import router as job_apply_router
@@ -31,9 +32,57 @@ from app.scheduler import runner
 async def lifespan(_app: FastAPI):
     from app.db.migrate import run_migrations
     run_migrations()
+
+    # Register Igbo continuous learning scheduled tasks
+    _register_igbo_tasks()
+
     runner.start()
     yield
     runner.stop()
+
+
+def _register_igbo_tasks():
+    """Register recurring Igbo learning tasks with the scheduler (idempotent)."""
+    try:
+        from app.scheduler import store as sched_store
+
+        igbo_tasks = [
+            {
+                "id": "igbo_weekly_sweep",
+                "name": "Igbo Weekly Vocabulary Sweep",
+                "prompt": "__igbo_sweep__",
+                "cron": "0 6 * * 0",
+                "domain": "igbo",
+            },
+            {
+                "id": "igbo_daily_sync",
+                "name": "Igbo Seed Sync Check",
+                "prompt": "__igbo_sync__",
+                "cron": "0 5 * * *",
+                "domain": "igbo",
+            },
+            {
+                "id": "igbo_gloss_unverified",
+                "name": "Igbo Gloss Unverified Words",
+                "prompt": "__igbo_gloss__",
+                "cron": "0 7 */3 * *",
+                "domain": "igbo",
+            },
+        ]
+
+        existing_ids = {t["id"] for t in sched_store.get_all_tasks()}
+        for task in igbo_tasks:
+            if task["id"] not in existing_ids:
+                data = sched_store._load()
+                from datetime import datetime, timezone
+                task["enabled"] = True
+                task["created_at"] = datetime.now(timezone.utc).isoformat()
+                task["last_run"] = None
+                task["last_result"] = None
+                data["tasks"][task["id"]] = task
+                sched_store._save(data)
+    except Exception:
+        pass
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
@@ -104,3 +153,4 @@ app.include_router(job_apply_router)
 app.include_router(forge_router)
 app.include_router(update_router)
 app.include_router(finance_research_router)
+app.include_router(igbo_router)
